@@ -1,5 +1,22 @@
 class VisitorsController < ApplicationController
-	def new
-		@owner = Owner.new
-	end
+  def new
+    @visitor = Visitor.new
+  end
+
+  def create
+    @visitor = Visitor.new(secure_params)
+    if @visitor.valid?
+      @visitor.subscribe
+      flash[:notice] = "Email #{@visitor.email} added to our maillist"
+      redirect_to root_url
+    else
+      render :new
+    end
+  end
+
+  private
+
+    def secure_params
+      params.require(:visitor).permit(:email)
+    end
 end
