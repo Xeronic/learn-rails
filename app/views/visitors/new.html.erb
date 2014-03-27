@@ -4,16 +4,14 @@
   <img src="http://lorempixel.com/1170/600/cats/1">
 </section>
 <section>
-  <div class="column">
+  <div class="small-6 columns text-center">
     <h2>Stay in touch</h2>
   </div>
-  <div class="column">
-    <div class="form-centered">
-      <%= simple_form_for @visitor do |f| %>
-        <%= f.error_notification %>
-        <%= f.input :email, label: false, placeholder: 'Your email address...' %>
-        <%= f.button :submit, "Sign up for the newsletter", class: "submit" %>
-      <% end %>
-    </div>
+  <div class="form">
+    <%= simple_form_for @visitor do |f| %>
+      <%= f.error_notification %>
+      <%= f.input :email, label: false, placeholder: 'Your email address...' %>
+      <%= f.button :submit, "Sign up for the newsletter", class: "submit" %>
+    <% end %>
   </div>
 </section>

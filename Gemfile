@@ -12,13 +12,12 @@ gem 'jbuilder', '~> 1.2'
 
 # Learn-rails
 gem 'activerecord-tableless'
-gem 'compass-rails', '~> 1.1.2'
 gem 'figaro'
 gem 'gibbon'
 gem 'google_drive'
 gem 'high_voltage'
 gem 'simple_form'
-gem 'zurb-foundation'
+gem 'foundation-rails'
 
 group :development do
 	gem 'better_errors'
